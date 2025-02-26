@@ -40,6 +40,8 @@ GET https://api.github.com/repos/n138-kz/youtube_discord_mp4
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com))send_Discord](https://github.com/n138-kz/send_Discord)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)Discordにwebhook経由でPOST(cURL)](https://qiita.com/n138-kz/items/7b86e3eee9d9994fc4d2)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://zenn.dev)【discord.py】複数ファイルを同時に送信するなど。](https://zenn.dev/milkystack/articles/35948cdfb7eb00)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com))youtube_bot](https://github.com/n138-kz/youtube_bot)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://zenn.dev)yt-dlpをPythonから呼び出してみようか](https://zenn.dev/rinadad/articles/9fb3f79586b92b)
 
 ## Sample of .secret/config
 
