@@ -42,6 +42,8 @@ GET https://api.github.com/repos/n138-kz/youtube_discord_mp4
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://zenn.dev)【discord.py】複数ファイルを同時に送信するなど。](https://zenn.dev/milkystack/articles/35948cdfb7eb00)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com))youtube_bot](https://github.com/n138-kz/youtube_bot)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://zenn.dev)yt-dlpをPythonから呼び出してみようか](https://zenn.dev/rinadad/articles/9fb3f79586b92b)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://zenn.dev)yt-dlp オプション 一覧　(pythonから呼び出す場合)](https://zenn.dev/apo_zenn/articles/b21667cc637361)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://www.wizard-notes.com)YouTubeの音楽をPythonで解析：youtube-dlによる動画メタデータ収集](https://www.wizard-notes.com/entry/python/get-youtube-metadata-with-youtubedl)
 
 ## Sample of .secret/config
 
