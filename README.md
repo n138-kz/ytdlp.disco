@@ -28,6 +28,73 @@ GET https://api.github.com/repos/n138-kz/youtube_discord_mp4
   
 </details>
 
+## Refs
+
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://console.cloud.google.com/)Developer Console](https://console.cloud.google.com/apis/credentials?hl=ja&project=upbeat-splicer-325708)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://console.cloud.google.com/)Google公式リファレンス](https://developers.google.com/identity/gsi/web/guides/migration?hl=ja)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://console.cloud.google.com/)YouTube Data API v3](https://console.cloud.google.com/apis/api/youtube.googleapis.com/quotas?inv=1&invt=AbqMUg&project=bold-rampart-413416)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://discord.com)Developer Console](https://discord.com/developers/applications)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://discord.com)Discord公式リファレンス](https://discord.com/developers/docs/topics/oauth2)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)「DiscordのIDでログイン」を実装する(Oauth2)](https://qiita.com/masayoshi4649/items/46fdb744cb8255f5eb98)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)PHP、CURLFileでファイルをアップロードする。(multipart/form-data、POST)](https://qiita.com/Pell/items/4ed98c906fd6a580a33f)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://scrapbox.io)OAuth2 Scopesの一覧](https://scrapbox.io/discordwiki/OAuth2_Scopes%E3%81%AE%E4%B8%80%E8%A6%A7)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)http_post](https://github.com/n138-kz/http_post)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)discord.pyを使用したdiscord botの作り方](https://qiita.com/TakeMimi/items/1e2d76eecc25e92c93ef#210-ver)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://discordbot.jp)Ping値を測定](https://discordbot.jp/blog/16/)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)Discord.py の Intents について](https://qiita.com/Erytheia/items/8b8e14f60fd7f266872b)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)discord.py入門(1)](https://qiita.com/sizumita/items/9d44ae7d1ce007391699)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://zenn.dev)YouTube APIを用いてPythonでデータを取得する](https://zenn.dev/eito_blog/articles/94dc874c112c9f)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)【Python】YouTube Data API を使って、いろんな情報を取得してみた](https://qiita.com/rkamikawa/items/dd1fd4c1427ece787eea)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)DiscordのBotでのファイル添付の仕方など【Python】](https://qiita.com/chatrate/items/aa6625f6663fa2ca33d6)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com))send_Discord](https://github.com/n138-kz/send_Discord)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)Discordにwebhook経由でPOST(cURL)](https://qiita.com/n138-kz/items/7b86e3eee9d9994fc4d2)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://zenn.dev)【discord.py】複数ファイルを同時に送信するなど。](https://zenn.dev/milkystack/articles/35948cdfb7eb00)
+
+
+## Sample of .secret/config
+
+<details>
+
+```json
+{
+  "internal":{
+    "discord":{
+    }
+  },
+  "external":{
+    "discord":{
+      "client_id":0,
+      "client_secret":"",
+      "public_key":"",
+      "bot_token":"",
+      "scope":{
+          "redirect_url":null,
+          "bot":[
+              "view_channel (1024)",
+              "send_message (2048)",
+              "embed_links (16384)",
+              "attach_files (32768)",
+              "read_message_history (65536)",
+              "mention_everyone (131072)",
+              "use_slash_command (2147483648)",
+              "use_embedded_activities (549755813888)"
+          ]
+      },
+      "install_context":{
+          "user":false,
+          "guild":true
+      },
+      "bot_invite_url":""
+    }
+  }
+}
+```
+
+## Library
+
+- python: 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+- discordpy: 2.5.0 (VersionInfo(major=2, minor=5, micro=0, releaselevel='final', serial=0))
+
 ## License
 
 [Copyright (c) 2025 Yuu Komiya (n138), Under MIT License](LICENSE)  
