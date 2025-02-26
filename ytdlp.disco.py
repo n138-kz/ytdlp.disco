@@ -83,13 +83,15 @@ async def on_message(message):
                     )
                     #ydl.download([message.content])
 
-                jsontext = json.dumps(meta)
-                await message.reply('[{0}] {1}\n{2}\n```\n{3}\n```'.format(
+                file='result.json'
+                with open(file, mode='w',encoding='UTF-8') as f:
+                    json.dump(meta,f,indent=4,ensure_ascii=False)
+
+                await message.reply('[{0}] {1}\n{2}\n'.format(
                     meta['id'],
                     meta['title'],
                     meta['uploader'],
-                    jsontext,
-                ))
+                ),files=[discord.File(file)])
 
     except:
         sys.exit()
