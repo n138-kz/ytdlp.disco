@@ -94,6 +94,8 @@ async def on_message(message):
                     )
                     #ydl.download([message.content])
 
+                await message.reply(meta['title'])
+
     except:
         sys.exit()
 
