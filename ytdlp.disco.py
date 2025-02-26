@@ -81,7 +81,7 @@ async def on_message(message):
                         message.content,
                         download=False
                     )
-                    #ydl.download([message.content])
+                    ydl.download([message.content])
 
                 file='result.json'
                 with open(file, mode='w',encoding='UTF-8') as f:
