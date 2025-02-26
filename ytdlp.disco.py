@@ -53,18 +53,7 @@ def ytdlp_metadata(meta):
     }
 
 # yt-dlp オプション
-YDL_OPTS = {
-    'format':'best',
-    'ignoreerrors':True,
-    'noprogress': True,
-    'writethumbnail': 'true',
-    'postprocessors': [
-        {
-            'key': 'EmbedThumbnail',
-            'already_have_thumbnail': False,
-        }
-    ],
-}
+YDL_OPTS = config['internal']['ydl_options']
 YDL_OPTS = {**YDL_OPTS, **{'progress_hooks': [ytdlp_progress_hook]}}
 
 intents = discord.Intents.default()
