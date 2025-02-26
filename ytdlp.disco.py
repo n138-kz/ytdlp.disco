@@ -88,6 +88,10 @@ async def on_message(message):
                 ))
 
                 with yt_dlp.YoutubeDL(YDL_OPTS) as ydl:
+                    meta = ydl.extract_info(
+                        message.content,
+                        download=False
+                    )
                     #ydl.download([message.content])
 
     except:
