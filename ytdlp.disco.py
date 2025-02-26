@@ -88,7 +88,7 @@ async def on_message(message):
                 ))
 
                 with yt_dlp.YoutubeDL(YDL_OPTS) as ydl:
-                    ydl.download([message.content])
+                    #ydl.download([message.content])
 
     except:
         sys.exit()
