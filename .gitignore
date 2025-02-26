@@ -2,10 +2,15 @@
 Backup/
 backup/
 *.bak*
+*_trash
 
 # Temporary files
 *.tmp
 *.dat
+test*.*
+result.json
+detail.json
+notice.json
 
 # Secret files
 *.env
@@ -25,3 +30,6 @@ build/
 *.exe
 *.msi
 *.jar
+
+#
+*_nameTomd5*
