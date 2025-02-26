@@ -57,34 +57,11 @@ GET https://api.github.com/repos/n138-kz/youtube_discord_mp4
 
 ```json
 {
-  "internal":{
-    "discord":{
-    }
-  },
   "external":{
     "discord":{
-      "client_id":0,
+      "client_id":"",
       "client_secret":"",
-      "public_key":"",
-      "bot_token":"",
-      "scope":{
-          "redirect_url":null,
-          "bot":[
-            "view_channel (1024)",
-            "send_message (2048)",
-            "embed_links (16384)",
-            "attach_files (32768)",
-            "read_message_history (65536)",
-            "mention_everyone (131072)",
-            "use_slash_command (2147483648)",
-            "use_embedded_activities (549755813888)"
-          ]
-      },
-      "install_context":{
-          "user":false,
-          "guild":true
-      },
-      "bot_invite_url":""
+      "bot_token":""
     }
   }
 }
