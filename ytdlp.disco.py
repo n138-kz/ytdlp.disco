@@ -39,6 +39,19 @@ def ytdlp_progress_hook(d):
         # ダウンロード完了時の処理
         print("ダウンロード完了")
 
+def ytdlp_metadata(meta):
+    return {
+        'upload_date': meta['upload_date'],
+        'uploader': meta['uploader'],
+        'views': meta['view_count'],
+        'likes': meta['like_count'],
+        'id': meta['id'],
+        'format': meta['format'],
+        'duration': meta['duration'],
+        'title': meta['title'],
+        'description': meta['description'],
+    }
+
 # yt-dlp オプション
 YDL_OPTS = {
     'format':'best',
