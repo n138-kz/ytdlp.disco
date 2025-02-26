@@ -83,7 +83,11 @@ async def on_message(message):
                     )
                     #ydl.download([message.content])
 
-                await message.reply(meta['title'])
+                await message.reply('[{0}] {1}\n{2}'.format(
+                    meta['id'],
+                    meta['title'],
+                    meta['uploader'],
+                ))
 
     except:
         sys.exit()
