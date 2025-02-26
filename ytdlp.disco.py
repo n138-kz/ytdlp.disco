@@ -83,10 +83,12 @@ async def on_message(message):
                     )
                     #ydl.download([message.content])
 
-                await message.reply('[{0}] {1}\n{2}'.format(
+                jsontext = json.dumps(meta)
+                await message.reply('[{0}] {1}\n{2}\n```\n{3}\n```'.format(
                     meta['id'],
                     meta['title'],
                     meta['uploader'],
+                    jsontext,
                 ))
 
     except:
