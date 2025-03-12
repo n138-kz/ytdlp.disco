@@ -28,6 +28,18 @@ GET https://api.github.com/repos/n138-kz/youtube_discord_mp4
   
 </details>
 
+## Discord Application
+
+### Invite URL
+
+[1344332728128114791](https://discord.com/oauth2/authorize?client_id=1344332728128114791)
+
+### Public Key
+
+```
+c7a4576adcbc8907951582c419a56025c29aacd8bea7a7a42878bfdd361b27db
+```
+
 ## Refs
 
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://discord.com)Developer Console](https://discord.com/developers/applications)
