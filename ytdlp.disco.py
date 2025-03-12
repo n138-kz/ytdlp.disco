@@ -91,12 +91,22 @@ async def on_message(message):
                 with open(file, mode='w',encoding='UTF-8') as f:
                     json.dump(meta,f,indent=4,ensure_ascii=False)
 
-                await message.reply('[{0}] {1}\n{2}\n'.format(
+                text = '[{0}] {1}\n{2}\n'.format(
                     meta['id'],
                     meta['title'],
                     meta['uploader'],
-                ),files=[discord.File(file)])
+                )
 
+                embed = discord.Embed(
+                    title=client.user.name.capitalize(),
+                    description=text,
+                    color=0x00ff00,
+                    url='https://github.com/n138-kz/ytdlp.disco',
+                    timestamp=datetime.datetime.now(datetime.timezone.utc),
+                )
+                embed.set_thumbnail(url=client.user.avatar.url)
+                response = await message.reply(embed=embed,files=[discord.File(file)])
+                print(response)
     except:
         sys.exit()
 
