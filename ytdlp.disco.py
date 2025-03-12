@@ -56,7 +56,7 @@ def ytdlp_metadata(meta):
 YDL_OPTS = config['internal']['ydl_options']
 YDL_OPTS = {**YDL_OPTS, **{'progress_hooks': [ytdlp_progress_hook]}}
 
-intents = discord.Intents.default()
+intents=discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 tree = discord.app_commands.CommandTree(client)
@@ -66,6 +66,10 @@ async def on_message(message):
     try:
         # 送信者がbotである場合は弾く
         if message.author.bot:
+            return
+        
+        # テキストチャンネルのみ処理
+        if message.channel.type != discord.ChannelType.text:
             return
         
         for prepand_link in PREPAND_LINKS:
@@ -105,8 +109,7 @@ async def ping(interaction: discord.Interaction):
     ping = round(raw_ping * 1000)
 
     # 送信する
-    # ephemeral=True→「これらはあなただけに表示されています」
-    await interaction.response.send_message(f"Pong!\nBotのPing値は{ping}msです。",ephemeral=True)
+    await interaction.response.send_message(f"Pong!\nBotのPing値は{ping}msです。",ephemeral=True)#ephemeral=True→「これらはあなただけに表示されています」
 
 @tree.command(name="version",description="Botのバージョンを表示します。")
 async def version(interaction: discord.Interaction):
@@ -116,8 +119,7 @@ async def version(interaction: discord.Interaction):
     text += client.user.name+'\n```\n'+SELF_CONTEXT['version']+'```\n'
 
     # 送信する
-    # ephemeral=True→「これらはあなただけに表示されています」
-    await interaction.response.send_message(f"Current version is below.\n{text}",ephemeral=True)
+    await interaction.response.send_message(GLOBAL_TEXT['err'][LOCALE]['incomplete_command'],ephemeral=True)#ephemeral=True→「これらはあなただけに表示されています」
 
 @client.event
 async def on_ready():
@@ -142,7 +144,7 @@ async def on_ready():
         'config', '--END',
     ))
 
-    #スラッシュコマンドを同期
+    # スラッシュコマンドを同期
     await tree.sync()
     print('[{0}] [{1}] {2}: {3}'.format(
         now(), 'DEBUG'.ljust(8, ' '),
@@ -152,20 +154,17 @@ async def on_ready():
 
     # アクティビティステータスを設定
     # https://qiita.com/ryo_001339/items/d20777035c0f67911454
-    await client.change_presence(
-        status=discord.Status.online,
-        activity=discord.CustomActivity(name='`/help`')
-    )
+    await client.change_presence(status=discord.Status.online, activity=discord.CustomActivity(name='/help'))
 
     print('[{0}] [{1}] {2}: {3}'.format(
         now(), 'DEBUG'.ljust(8, ' '),
         'discord.bot.name',
         ''+client.user.name,
     ))
+
 # botを起動
-print('[{0}] [{1}] {2}: {3}'.format(
-    now(), 'DEBUG'.ljust(8, ' '),
-    'discord.token',
-    DISCORD_API_TOKEN,
-))
-client.run(DISCORD_API_TOKEN)
+def main():
+    client.run(DISCORD_API_TOKEN)
+
+if __name__ == '__main__':
+    main()
